@@ -198,6 +198,7 @@ public class CheckMojo extends AbstractJacocoMojo implements IViolationsOutput {
 		} else {
 			this.getLog().info(CHECK_SUCCESS);
 		}
+		return;
 	}
 
 	public void onViolation(final ICoverageNode node, final Rule rule,

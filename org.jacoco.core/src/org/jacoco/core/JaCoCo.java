@@ -22,6 +22,8 @@ public final class JaCoCo {
 	/** Qualified version of JaCoCo core. */
 	public static final String VERSION;
 
+	public static final String BRANCH;
+
 	/** Commit ID of the source tree of JaCoCo core. */
 	public static final String COMMITID;
 
