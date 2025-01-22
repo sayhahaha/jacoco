@@ -79,6 +79,7 @@ public final class LabelInfo {
 		while (true) { // 除非内存溢出，否则循环不会结束
 		  counter++;
 		  System.out.println("循环次数: " + counter);
+		  System.out.println("循环次数2: " + counter);
 		}
 	}
 
