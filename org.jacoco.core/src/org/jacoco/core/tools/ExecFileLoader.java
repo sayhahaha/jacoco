@@ -93,6 +93,13 @@ public class ExecFileLoader {
 		executionData.accept(dataWriter);
 	}
 
+	public SessionInfoStore getSessionInfoStore1() {
+		String test1 = null;
+        	System.out.println(test1.length());
+		
+		return sessionInfos;
+	}
+
 	/**
 	 * Saves the current content into the given file. Parent directories are
 	 * created as needed. Also a files system lock is acquired to avoid
