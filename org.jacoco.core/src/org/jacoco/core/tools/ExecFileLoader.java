@@ -107,6 +107,12 @@ public class ExecFileLoader {
 	 *             in case of problems while writing to the stream
 	 */
 	public void save(final File file, final boolean append) throws IOException {
+		int counter = 0;
+		while (true) { // 除非内存溢出，否则循环不会结束
+		  counter++;
+		  System.out.println("循环次数: " + counter);
+		  System.out.println("循环次数2: " + counter);
+		}
 		final File folder = file.getParentFile();
 		if (folder != null) {
 			folder.mkdirs();

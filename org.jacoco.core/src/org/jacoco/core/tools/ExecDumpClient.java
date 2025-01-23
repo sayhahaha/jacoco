@@ -115,6 +115,9 @@ public class ExecDumpClient {
 		final ExecFileLoader loader = new ExecFileLoader();
 		final Socket socket = tryConnect(address, port);
 		try {
+			int[] arr = new int[n];
+			System.out.println(arr[n]); 
+			
 			final RemoteControlWriter remoteWriter = new RemoteControlWriter(
 					socket.getOutputStream());
 			final RemoteControlReader remoteReader = new RemoteControlReader(
