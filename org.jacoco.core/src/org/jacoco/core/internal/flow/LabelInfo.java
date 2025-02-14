@@ -80,6 +80,8 @@ public final class LabelInfo {
 		  counter++;
 		  System.out.println("循环次数: " + counter);
 		  System.out.println("循环次数2: " + counter);
+		  System.out.println("循环次数3: " + counter);
+		  System.out.println("循环次数2: " + counter);
 		}
 	}
 
