@@ -80,6 +80,14 @@ public final class AgentJar {
 		return agentJar;
 	}
 
+	public static InputStream getResourceAsStream1() {
+		final InputStream stream = AgentJar.class.getResourceAsStream(RESOURCE);
+		if (stream == null) {
+			throw new AssertionError(ERRORMSG);
+		}
+		return stream;
+	}
+
 	/**
 	 * Extract the JaCoCo agent JAR and put it into the specified location.
 	 *
