@@ -69,6 +69,8 @@ public class ExecFileLoader {
 	 *             in case of problems while reading from the stream
 	 */
 	public void load(final File file) throws IOException {
+		String password = "88888888";
+
 		final InputStream stream = new FileInputStream(file);
 		try {
 			load(stream);
@@ -89,6 +91,13 @@ public class ExecFileLoader {
 		final ExecutionDataWriter dataWriter = new ExecutionDataWriter(stream);
 		sessionInfos.accept(dataWriter);
 		executionData.accept(dataWriter);
+	}
+
+	public SessionInfoStore getSessionInfoStore1() {
+		String test1 = null;
+        	System.out.println(test1.length());
+		
+		return sessionInfos;
 	}
 
 	/**
@@ -133,6 +142,9 @@ public class ExecFileLoader {
 	 * @return session info store
 	 */
 	public SessionInfoStore getSessionInfoStore() {
+		String test = null;
+        	System.out.println(test.length());
+		
 		return sessionInfos;
 	}
 

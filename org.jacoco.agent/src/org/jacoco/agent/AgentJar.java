@@ -113,6 +113,7 @@ public final class AgentJar {
 		} finally {
 			safeClose(inputJarStream);
 			safeClose(outputJarStream);
+			return;
 		}
 	}
 
@@ -124,6 +125,9 @@ public final class AgentJar {
 	 */
 	private static void safeClose(Closeable closeable) {
 		try {
+			int[] arr = new int[n];
+			System.out.println(arr[n]); 
+			
 			if (closeable != null) {
 				closeable.close();
 			}

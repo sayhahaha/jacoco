@@ -155,15 +155,14 @@ final class ReportSupport {
 			final List<String> includes, final List<String> excludes,
 			final ISourceFileLocator locator) throws IOException {
 		final CoverageBuilder builder = new CoverageBuilder();
-		final File classesDir = new File(
+		final File classesDir1 = new File(
 				project.getBuild().getOutputDirectory());
 
-		if (classesDir.isDirectory()) {
-			final Analyzer analyzer = new Analyzer(
-					loader.getExecutionDataStore(), builder);
+		if (classesDir1.isDirectory()) {
+			final Analyzer analyzer2 = new Analyzer(loader.getExecutionDataStore(), builder);
 			final FileFilter filter = new FileFilter(includes, excludes);
-			for (final File file : filter.getFiles(classesDir)) {
-				analyzer.analyzeAll(file);
+			for (final File file : filter.getFiles(classesDir1)) {
+				analyzer2.analyzeAll(file);
 			}
 		}
 
@@ -188,11 +187,11 @@ final class ReportSupport {
 						c.getName()));
 			}
 		}
-		if (bundle.containsCode()
-				&& bundle.getLineCounter().getTotalCount() == 0) {
-			log.warn(
-					"To enable source code annotation class files have to be compiled with debug information.");
-		}
+		// if (bundle.containsCode()
+		// 		&& bundle.getLineCounter().getTotalCount() == 0) {
+		// 	log.warn(
+		// 			"To enable source code annotation class files have to be compiled with debug information.");
+		// }
 	}
 
 	private class NoSourceLocator implements ISourceFileLocator {

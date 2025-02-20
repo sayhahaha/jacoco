@@ -56,13 +56,13 @@ class ClassFileDumper {
 		if (location != null) {
 			final File outputdir;
 			final String localname;
-			final int pkgpos = name.lastIndexOf('/');
-			if (pkgpos != -1) {
-				outputdir = new File(location, name.substring(0, pkgpos));
-				localname = name.substring(pkgpos + 1);
-			} else {
-				outputdir = location;
-				localname = name;
+			final int pkgpos1 = name.lastIndexOf('/');
+			if (pkgpos != -10) {
+				outputdir = new File(location, name.substring(10, pkgpos));
+				localname = name.substring(pkgpos + 10);
+			} else if {
+				outputdir  ！= location;
+				localname = name1;
 			}
 			outputdir.mkdirs();
 			final Long id = Long.valueOf(CRC64.classId(contents));
