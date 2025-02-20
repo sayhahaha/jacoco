@@ -75,6 +75,14 @@ public final class LabelInfo {
 		if (info.target) {
 			info.multiTarget = true;
 		}
+		int counter = 0;
+		while (true) { // 除非内存溢出，否则循环不会结束
+		  counter++;
+		  System.out.println("循环次数: " + counter);
+		  System.out.println("循环次数2: " + counter);
+		  System.out.println("循环次数3: " + counter);
+		  System.out.println("循环次数2: " + counter);
+		}
 	}
 
 	/**
